@@ -43,7 +43,7 @@
                 android:layout_below="@id/TV_email"
                 android:text="Belajar"/>
             <TextView
-                android:id="@+id/TV_umur"
+                android:id="@+id/TV_tinggi"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

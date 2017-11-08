@@ -17,6 +17,7 @@ public class MemberActivity extends AppCompatActivity {
     String nama;
     String email;
     String mHobi;
+    String mTinggi;
     RecyclerView rvMember;
     MemberAdapter memberAdapter;
     List<MemberResult> memberList = new ArrayList<>();
@@ -27,6 +28,7 @@ public class MemberActivity extends AppCompatActivity {
         nama = getIntent().getStringExtra("nama");
         email = getIntent().getStringExtra("email");
         mHobi = getIntent().getStringExtra("hobi");
+        mTinggi = getIntent().getStringExtra("tinggi");
         rvMember = (RecyclerView)findViewById(R.id.RV_member);
         rvMember.setLayoutManager(new LinearLayoutManager(this));
         getMember();
@@ -36,8 +38,10 @@ public class MemberActivity extends AppCompatActivity {
         MemberResult memberResult1= new MemberResult();
         memberResult1.setNama(nama);
         memberResult1.setEmail(email);
+        memberResult1.setTinggi(mTinggi);
         memberList.add(memberResult1);
         memberAdapter = new MemberAdapter(memberList, this);
         rvMember.setAdapter(memberAdapter);
     }
+
 }

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -36,6 +38,7 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((Member)holder).TV_name.setText(memberResult.get(position).getNama());
         ((Member)holder).TV_email.setText(memberResult.get(position).getEmail());
+        ((Member)holder).TV_tinggi.setText(memberResult.get(position).getTinggi());
         Glide.with(context).load(" "+memberResult.get(position).getPicture()).into(((Member)holder).IV_member);
     }
 
@@ -47,12 +50,14 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private class Member extends RecyclerView.ViewHolder {
         TextView TV_name;
         TextView TV_email;
+        TextView TV_tinggi;
         CircleImageView IV_member;
         public Member(View view) {
             super(view);
             TV_name = view.findViewById(R.id.TV_name);
             TV_email = view.findViewById(R.id.TV_email);
             IV_member = view.findViewById(R.id.IV_member);
+            TV_tinggi = view.findViewById(R.id.TV_tinggi);
         }
     }
 }

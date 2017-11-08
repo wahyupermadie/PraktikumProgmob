@@ -75,7 +75,35 @@
             android:hint="Retype Password"
             android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tinggi Badan Kamu"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SB_tinggi"
+            android:max="90"
+            android:progress="45"/>
+        <TextView
+            android:id="@+id/TV_tinggi"
+            android:text="100cm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,6 +115,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -112,4 +145,5 @@
         android:text="Sign Up"
         android:textColor="#fff"/>
 
+    </LinearLayout>
 </LinearLayout>

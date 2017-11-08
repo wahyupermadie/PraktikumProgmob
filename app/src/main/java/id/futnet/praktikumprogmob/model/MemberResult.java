@@ -8,6 +8,15 @@ public class MemberResult {
     private int id;
     private String nama;
     private String email;
+    private String tinggi;
+
+    public String getTinggi() {
+        return tinggi;
+    }
+
+    public void setTinggi(String tinggi) {
+        this.tinggi = tinggi;
+    }
 
     public int getId() {
         return id;
