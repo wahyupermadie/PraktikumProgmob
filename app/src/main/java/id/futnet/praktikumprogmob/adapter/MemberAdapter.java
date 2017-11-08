@@ -39,7 +39,7 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         ((Member)holder).TV_name.setText(memberResult.get(position).getNama());
         ((Member)holder).TV_email.setText(memberResult.get(position).getEmail());
         ((Member)holder).TV_tinggi.setText(memberResult.get(position).getTinggi());
-        Glide.with(context).load(" "+memberResult.get(position).getPicture()).into(((Member)holder).IV_member);
+//        Glide.with(context).load(" "+memberResult.get(position).getPicture()).into(((Member)holder).IV_member);
     }
 
     @Override

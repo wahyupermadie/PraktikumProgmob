@@ -44,4 +44,13 @@ public class MemberActivity extends AppCompatActivity {
         rvMember.setAdapter(memberAdapter);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }

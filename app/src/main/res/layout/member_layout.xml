@@ -16,7 +16,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:id="@+id/IV_member"
-                android:src="@color/colorAccent"
+                android:src="@drawable/ava"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="16dp"/>
