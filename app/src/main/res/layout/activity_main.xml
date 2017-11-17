@@ -46,35 +46,6 @@
             android:inputType="textEmailAddress"/>
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/TI_password"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <EditText
-            android:id="@+id/ET_create_new_password"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"/>
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/TI_repassword"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <EditText
-            android:id="@+id/ET_create_new_repassword"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Retype Password"
-            android:inputType="textPassword"/>
-    </android.support.design.widget.TextInputLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,7 +57,7 @@
             android:text="Tinggi Badan Kamu"
             android:layout_marginBottom="5dp"/>
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -95,14 +66,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/SB_tinggi"
-            android:max="90"
-            android:progress="45"/>
+            android:max="250"
+            android:progress="125"/>
         <TextView
+            android:paddingRight="5dp"
+            android:layout_below="@+id/SB_tinggi"
             android:id="@+id/TV_tinggi"
-            android:text="100cm"
-            android:layout_width="match_parent"
+            android:text="100"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"/>
+        <TextView
+            android:text="Cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/TV_tinggi"
+            android:layout_below="@+id/SB_tinggi"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/RG_jenisKelamin">
+                <RadioButton android:id="@+id/RB_laki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki - Laki"/>
+                <RadioButton android:id="@+id/RB_wanita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"/>
+            </RadioGroup>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,21 +126,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <CheckBox android:id="@+id/CB_Belajar"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belajar" />
-        <CheckBox android:id="@+id/CB_Bermain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bermain "/>
-
-    </LinearLayout>
-
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/CB_Belajar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belajar" />
+            <CheckBox android:id="@+id/CB_Bermain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bermain "/>
+        </LinearLayout>
     <Button
         android:id="@+id/ButtomRegister"
         android:layout_width="fill_parent"
@@ -144,6 +147,5 @@
         android:background="#b45705"
         android:text="Sign Up"
         android:textColor="#fff"/>
-
     </LinearLayout>
 </LinearLayout>

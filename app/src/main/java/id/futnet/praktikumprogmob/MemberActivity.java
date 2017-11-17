@@ -11,13 +11,19 @@ import java.util.Arrays;
 import java.util.List;
 
 import id.futnet.praktikumprogmob.adapter.MemberAdapter;
+import id.futnet.praktikumprogmob.api.ApiInterface;
+import id.futnet.praktikumprogmob.api.MemberApi;
 import id.futnet.praktikumprogmob.model.MemberResult;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MemberActivity extends AppCompatActivity {
     String nama;
     String email;
     String mHobi;
     String mTinggi;
+    String mJenisKelamin;
     RecyclerView rvMember;
     MemberAdapter memberAdapter;
     List<MemberResult> memberList = new ArrayList<>();
@@ -29,6 +35,7 @@ public class MemberActivity extends AppCompatActivity {
         email = getIntent().getStringExtra("email");
         mHobi = getIntent().getStringExtra("hobi");
         mTinggi = getIntent().getStringExtra("tinggi");
+        mJenisKelamin = getIntent().getStringExtra("kelamin");
         rvMember = (RecyclerView)findViewById(R.id.RV_member);
         rvMember.setLayoutManager(new LinearLayoutManager(this));
         getMember();
@@ -39,6 +46,8 @@ public class MemberActivity extends AppCompatActivity {
         memberResult1.setNama(nama);
         memberResult1.setEmail(email);
         memberResult1.setTinggi(mTinggi);
+        memberResult1.setHobi(mHobi);
+        memberResult1.setKelamin(mJenisKelamin);
         memberList.add(memberResult1);
         memberAdapter = new MemberAdapter(memberList, this);
         rvMember.setAdapter(memberAdapter);
@@ -46,7 +55,9 @@ public class MemberActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        Toast.makeText(getApplicationContext(),"16. onDestroy()", Toast.LENGTH_SHORT).show();
         super.onDestroy();
+
     }
 
     @Override

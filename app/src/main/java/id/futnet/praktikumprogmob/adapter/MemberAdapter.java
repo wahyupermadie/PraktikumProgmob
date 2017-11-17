@@ -39,6 +39,8 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         ((Member)holder).TV_name.setText(memberResult.get(position).getNama());
         ((Member)holder).TV_email.setText(memberResult.get(position).getEmail());
         ((Member)holder).TV_tinggi.setText(memberResult.get(position).getTinggi());
+        ((Member)holder).TV_hobi.setText(memberResult.get(position).getHobi());
+        ((Member)holder).TV_kelamin.setText(memberResult.get(position).getKelamin());
 //        Glide.with(context).load(" "+memberResult.get(position).getPicture()).into(((Member)holder).IV_member);
     }
 
@@ -51,12 +53,16 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         TextView TV_name;
         TextView TV_email;
         TextView TV_tinggi;
+        TextView TV_kelamin;
+        TextView TV_hobi;
         CircleImageView IV_member;
         public Member(View view) {
             super(view);
+            TV_kelamin = view.findViewById(R.id.TV_kelamin);
             TV_name = view.findViewById(R.id.TV_name);
             TV_email = view.findViewById(R.id.TV_email);
             IV_member = view.findViewById(R.id.IV_member);
+            TV_hobi = view.findViewById(R.id.TV_hobi);
             TV_tinggi = view.findViewById(R.id.TV_tinggi);
         }
     }
